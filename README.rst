@@ -12,6 +12,9 @@ This package provides a nose2 plugin implementing the -k flag known from
 unittest discover. The plugin allows to select tests by specifying on or more
 substring patterns.
 
+Patterns
+========
+
 Matching is performed against the full dotted name of each test. If a pattern
 is prefixed with '!' its meaning is inverted, and only tests not matching
 the pattern will be selected. Multiple -K flags (plugin rules mandate
