@@ -55,6 +55,10 @@ else:
         return '%s.%s' % (cls.__module__, cls.__name__)
 
 
+def strfunc(func):
+    return '%s.%s' % (func.__module__, func.__name__)
+
+
 def testname(name):
     return name.split('\n', 1)[0]
 
@@ -117,7 +121,7 @@ class TestNamePatterns(events.Plugin):
             return self._nameFromPath(test._dt_test.filename)
         if isinstance(test, unittest.FunctionTestCase):
             if not hasattr(test, '_funcName'):
-                return testname(strclass(test._testFunc))
+                return testname(strfunc(test._testFunc))
         return testname(test.id())
 
     def _nameFromPath(self, path):
