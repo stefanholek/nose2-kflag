@@ -22,10 +22,15 @@ Supports all types of nose2 tests:
 
 Installation
 ------------
-::
+
+.. code-block :: ini
 
     [unittest]
     plugins = nose2_kflag
+
+    [nose2-kflag]
+    always-on = False
+    patterns =
 
 Debugging
 ---------
