@@ -47,7 +47,7 @@ from nose2 import events
 log = logging.getLogger(__name__)
 
 
-if sys.version_info >= (3, 3):
+if sys.version_info >= (3, 5):
     def strclass(cls):
         return '%s.%s' % (cls.__module__, cls.__qualname__)
 else:
