@@ -94,6 +94,8 @@ class TestNamePatterns(events.Plugin):
 
         if self.testNamePatterns:
             self.register()
+        else:
+            self.skipPhase1 = self.skipPhase2 = True
 
     def getTestCaseNames(self, event):
         # Phase 1: Exclude test case methods
