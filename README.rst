@@ -52,3 +52,6 @@ Then add the plugin to your nose2.cfg::
     [unittest]
     plugins = nose2_kflag
 
+    [nose2-kflag]
+    always-on = false
+    patterns =
